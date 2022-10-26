@@ -23,13 +23,13 @@ function displayCoffeeList(coffeeList) {
   })
 }
 
-function getCoffee() {
+function getCoffee(temp) {
   setLoading()
-  fetch(`https://api.sampleapis.com/coffee/hot`)
+  fetch(`https://api.sampleapis.com/coffee/${temp}`)
     .then(response => response.json())
     .then(displayCoffeeList)
     .catch(console.error) // TO DO: Display err for user
 }
 
 
-getCoffee()
+getCoffee('hot')
