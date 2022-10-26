@@ -14,7 +14,7 @@
     <header>
       <h1 id="heading">Contact</h1>
     </header>
-    <main>
+    <main class="contactPage">
       <form action="/index.html" method="post" id="myForm">
         <label for="email">Email Address -</label>
         <input id="email" name="email" type="email" placeholder="youremail@email.com">
@@ -54,11 +54,11 @@
       </form>
     </main>
     <button onclick="changeHeading()">Change Heading</button>
-    <div id="time">
+
     <button onclick="showTime()">The Time Is:</button>
-  </div>
-  <button onclick="this.innerHTML = Date()">Show Time In Button</button>
-  <button onclick="showLocation()">Show Location</button>
+
+    <button onclick="this.innerHTML = Date()">Show Time In Button</button>
+    <button onclick="showLocation()">Show Location</button>
   </div>
   <script>
     function changeHeading() {
@@ -70,7 +70,7 @@
     }
 
     function showTime() {
-      const currentTime = document.getElementById('time').innerHTML = Date()
+      const currentTime = document.getElementById('heading').innerHTML = Date()
     }
 
     const showLocation = () => {

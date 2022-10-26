@@ -27,3 +27,7 @@ main {
 main > div {
   width: 30%;
 }
+
+.contactPage {
+  text-align: left;
+}
