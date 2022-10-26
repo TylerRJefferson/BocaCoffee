@@ -54,6 +54,11 @@
       </form>
     </main>
     <button onclick="changeHeading()">Change Heading</button>
+    <div id="time">
+    <button onclick="showTime()">The Time Is:</button>
+  </div>
+  <button onclick="this.innerHTML = Date()">Show Time In Button</button>
+  <button onclick="showLocation()">Show Location</button>
   </div>
   <script>
     function changeHeading() {
@@ -63,6 +68,17 @@
       heading.innerText = "I'm New"
       heading.style.color = 'red'
     }
+
+    function showTime() {
+      const currentTime = document.getElementById('time').innerHTML = Date()
+    }
+
+    const showLocation = () => {
+      navigator.geolocation.getCurrentPosition((position) => {
+        alert(`latitude ${position.coords.latitude} longitude ${position.coords.longitude}`)
+      }, console.error)
+    }
+
   </script>
 </body>
 
